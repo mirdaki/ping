@@ -69,6 +69,10 @@ Testing -->
 - [Rust](https://www.rust-lang.org/)
 - [Ruma](https://www.ruma.io/)
 
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for how to work on the project.
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
