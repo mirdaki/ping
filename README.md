@@ -8,7 +8,7 @@ A cross-platform and blazingly fast [Matrix](https://matrix.org/) client focused
 
 [Discord](https://discord.com/) is a fantastic chat application for communities and people who play games together. [Element](https://element.io/) is an awesome open source, E2E encrypted, and decentralized Matrix client. I would like to take aspects of both of these, mix in a native look-and-feel, fast start times, low memory usage, and create a great client for groups and gaming chat with easy audio/video calls.
 
-In addition to those functional feats, I'd like to build Ping in a way that makes it relatively easy to support multiple platforms with shared code. This may be a fools errand, but it sounds like an interesting challenge!
+In addition to those functional feats, I'd like to build Ping in a way that makes it relatively easy to support multiple platforms with shared code. This may be a fools errand, but it sounds like an interesting challenge! In doing so, I expect some boundaries will be pushed resulting in fixes and features upstreamed, helping the community overall.
 
 ### Roadmap
 
