@@ -1,0 +1,61 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cargo",
+			"subcommand": "build",
+			"problemMatcher": [
+				"$rustc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"label": "Rust: cargo build - ping"
+		},
+		{
+			"type": "cargo",
+			"subcommand": "clean",
+			"problemMatcher": [
+				"$rustc"
+			],
+			"group": "clean",
+			"label": "Rust: cargo clean - ping"
+		},
+		{
+			"type": "cargo",
+			"subcommand": "run",
+			"problemMatcher": [
+				"$rustc"
+			],
+			"label": "Rust: cargo run - ping"
+		},
+		{
+			"type": "cargo",
+			"subcommand": "test",
+			"problemMatcher": [
+				"$rustc"
+			],
+			"group": "test",
+			"label": "Rust: cargo test - ping"
+		},
+		{
+			"type": "cargo",
+			"subcommand": "fmt",
+			"problemMatcher": [
+				"$rustc"
+			],
+			"group": "fmt",
+			"label": "Rust: cargo fmt - ping"
+		},
+		{
+			"type": "cargo",
+			"subcommand": "clippy",
+			"problemMatcher": [
+				"$rustc"
+			],
+			"group": "clippy",
+			"label": "Rust: cargo clippy - ping"
+		}
+	]
+}
