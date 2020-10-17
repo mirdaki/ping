@@ -54,15 +54,46 @@ Long Term (aspirational but objective setting things)
     - Low memory usage
     - Automated CI/CD with extensive testing
 
-<!-- ## Getting Started
+## Development Getting Started
 
-Installing
+### Installing
 
-Compiling
+[Install Rust](https://www.rust-lang.org/tools/install) and optionally [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/) or [Podman](https://podman.io/getting-started/installation.html) and [Podman Compose](https://github.com/containers/podman-compose) for running the test Synapse server.
 
-Running
+### Compiling
 
-Testing -->
+To build:
+
+```bash
+cargo build
+```
+
+To format and lint:
+
+```bash
+cargo fmt
+cargo clippy
+```
+
+### Running
+
+To start the test Synpase server, use Docker Compose or Podman Compose:
+
+```bash
+docker-compose -f containers/dev.docker-compose.yml up
+
+podman-compose -f containers/dev.docker-compose.yml up
+```
+
+To stop the test Synpase server, use Docker Compose or Podman Compose:
+
+```bash
+docker-compose -f containers/dev.docker-compose.yml down
+
+podman-compose -f containers/dev.docker-compose.yml down
+```
+
+<!-- ### Testing -->
 
 ## Built With
 
