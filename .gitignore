@@ -16,3 +16,12 @@ Cargo.lock
 !.vscode/launch.json
 !.vscode/extensions.json
 *.code-workspace
+
+# Containers
+containers/element/*
+!containers/element/config.json
+
+containers/synapse/*
+!containers/synapse/localhost.signing.key
+!containers/synapse/localhost.log.config
+!containers/synapse/homeserver.yaml

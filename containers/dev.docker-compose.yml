@@ -1,0 +1,17 @@
+version: "3.3"
+
+services:
+    synapse:
+        image: "matrixdotorg/synapse:latest"
+        container_name: "synapse"
+        ports:
+            - "8008:8008"
+        volumes:
+            - "./synapse:/data"
+    element:
+        image: "vectorim/riot-web:latest"
+        container_name: "element"
+        ports:
+            - "8009:80"
+        volumes:
+            - "./element:/app"
