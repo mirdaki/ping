@@ -13,19 +13,13 @@ In addition to those functional feats, I'd like to build Ping in a way that make
 ### Roadmap
 
 Short Term (tasks that could be done in the foreseeable future)
-- [ ] Basic CLI command based chat
-    - [ ] Create a user
-    - [ ] Send a message to another user
-    - [ ] Receive a message from another user
-    - [ ] Edit a message
-    - [ ] Delete a message
 - [ ] Basic Linux GTK based app
     - [ ] Create a user
     - [ ] Send a message to another user
     - [ ] Receive a message from another user
     - [ ] Edit a message
     - [ ] Delete a message
-- [ ] Basic Web App
+- [ ] Basic Windows App
     - [ ] Create a user
     - [ ] Send a message to another user
     - [ ] Receive a message from another user
@@ -98,7 +92,7 @@ podman-compose -f containers/dev.docker-compose.yml down
 ## Built With
 
 - [Rust](https://www.rust-lang.org/)
-- [Ruma](https://www.ruma.io/)
+- [matrix-rust-sdk](https://github.com/matrix-org/matrix-rust-sdk
 
 ## Contributing
 
