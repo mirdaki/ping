@@ -92,7 +92,7 @@ podman-compose -f containers/dev.docker-compose.yml down
 ## Built With
 
 - [Rust](https://www.rust-lang.org/)
-- [matrix-rust-sdk](https://github.com/matrix-org/matrix-rust-sdk
+- [matrix-rust-sdk](https://github.com/matrix-org/matrix-rust-sdk)
 
 ## Contributing
 
