@@ -1,18 +1,28 @@
-use iced::{executor, Application, Command, Element, Settings, Text};
+use iced::{executor, Application, Command, Element, Settings,};
+
+mod ui;
+use ui::message;
 
 pub fn main() -> iced::Result {
     Hello::run(Settings::default())
 }
 
-struct Hello;
+struct Hello {
+    messages: message::Message
+}
+
+#[derive(Debug)]
+enum HelloMessage {
+    Hello(message::MessageMessage)
+}
 
 impl Application for Hello {
     type Executor = executor::Default;
-    type Message = ();
+    type Message = HelloMessage;
     type Flags = ();
 
     fn new(_flags: ()) -> (Hello, Command<Self::Message>) {
-        (Hello, Command::none())
+        (Hello { messages: message::Message::new()} , Command::none())
     }
 
     fn title(&self) -> String {
@@ -24,6 +34,9 @@ impl Application for Hello {
     }
 
     fn view(&mut self) -> Element<Self::Message> {
-        Text::new("Hello, world!").into()
+        self.messages = message::Message::Loading;
+        self.messages
+            .view()
+            .map(HelloMessage::Hello)
     }
 }
