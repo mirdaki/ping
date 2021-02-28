@@ -1,19 +1,19 @@
 use iced::{executor, Application, Command, Element, Settings,};
 
 mod ui;
-use ui::message;
+use ui::{message, chat_view};
 
 pub fn main() -> iced::Result {
     Hello::run(Settings::default())
 }
 
 struct Hello {
-    messages: message::Message
+    chat_view: chat_view::ChatView
 }
 
 #[derive(Debug)]
 enum HelloMessage {
-    Hello(message::MessageMessage)
+    Hello(chat_view::ChatViewMessage)
 }
 
 impl Application for Hello {
@@ -22,7 +22,111 @@ impl Application for Hello {
     type Flags = ();
 
     fn new(_flags: ()) -> (Hello, Command<Self::Message>) {
-        (Hello { messages: message::Message::new()} , Command::none())
+        (Hello { 
+            chat_view: chat_view::ChatView::new(vec![
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading,
+                message::Message::Loading])
+            },
+        Command::none())
     }
 
     fn title(&self) -> String {
@@ -34,8 +138,7 @@ impl Application for Hello {
     }
 
     fn view(&mut self) -> Element<Self::Message> {
-        self.messages = message::Message::Loading;
-        self.messages
+        self.chat_view
             .view()
             .map(HelloMessage::Hello)
     }
