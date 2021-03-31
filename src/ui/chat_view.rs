@@ -38,7 +38,7 @@ impl ChatView {
             ChatView::Loaded(state) => {
                 let message_list: Scrollable<_> = state.messages.iter_mut().fold(
                     Scrollable::new(&mut state.scroll)
-                        .spacing(30)
+                        .spacing(40)
                         .align_items(Align::Center)
                         .width(Length::Fill)
                         .height(Length::Fill),
@@ -47,7 +47,8 @@ impl ChatView {
                             .view()
                             .map(ChatViewMessage::HandleMessageMessage))
                     }
-                );
+                )
+                .padding(20);
 
                 message_list.into()
 

@@ -5,11 +5,11 @@
 	// List of extensions which should be recommended for users of this workspace.
 	"recommendations": [
 		"bungcip.better-toml",
-		"vadimcn.vscode-lldb",
+		"matklad.rust-analyzer",
 		"serayuzgur.crates",
-		"webfreak.debug",
-		"rust-lang.rust",
-		"hdevalke.rust-test-lens"
+		"swellaby.vscode-rust-test-adapter",
+		"vadimcn.vscode-lldb",
+		"webfreak.debug"
 	],
 	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
 	"unwantedRecommendations": [
