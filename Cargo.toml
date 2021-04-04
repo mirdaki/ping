@@ -8,7 +8,7 @@ edition = "2018"
 
 [dependencies]
 chrono = "0.4"
-iced = "0.2"
+iced = { version = "0.2", features = ["image", "debug"] }
 matrix-sdk = "0.2.0"
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"

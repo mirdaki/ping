@@ -1,4 +1,4 @@
-use iced::{Align, Element, Length, Scrollable, scrollable};
+use iced::{scrollable, Align, Element, Length, Scrollable};
 
 use crate::message::{Message, MessageMessage};
 
@@ -21,12 +21,10 @@ pub enum ChatViewMessage {
 
 impl ChatView {
     pub fn new(messages: Vec<Message>) -> Self {
-        ChatView::Loaded(
-            ChatViewState {
-                messages,
-                scroll: scrollable::State::new(),
-            }
-        )
+        ChatView::Loaded(ChatViewState {
+            messages,
+            scroll: scrollable::State::new(),
+        })
     }
 
     pub fn update(&mut self, message: ChatViewMessage) {
@@ -36,19 +34,21 @@ impl ChatView {
     pub fn view(&mut self) -> Element<ChatViewMessage> {
         match self {
             ChatView::Loaded(state) => {
-                let message_list: Scrollable<_> = state.messages.iter_mut().fold(
-                    Scrollable::new(&mut state.scroll)
-                        .spacing(40)
-                        .align_items(Align::Center)
-                        .width(Length::Fill)
-                        .height(Length::Fill),
-                    |scrollable, message| {
-                        scrollable.push(message
-                            .view()
-                            .map(ChatViewMessage::HandleMessageMessage))
-                    }
-                )
-                .padding(20);
+                let message_list: Scrollable<_> = state
+                    .messages
+                    .iter_mut()
+                    .fold(
+                        Scrollable::new(&mut state.scroll)
+                            .spacing(40)
+                            .align_items(Align::Center)
+                            .width(Length::Fill)
+                            .height(Length::Fill),
+                        |scrollable, message| {
+                            scrollable
+                                .push(message.view().map(ChatViewMessage::HandleMessageMessage))
+                        },
+                    )
+                    .padding(20);
 
                 message_list.into()
 

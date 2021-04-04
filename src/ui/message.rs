@@ -1,5 +1,5 @@
 use chrono::{DateTime, Utc};
-use iced::{Align, Container, Element, HorizontalAlignment, Length, Row, Column, Text, Image};
+use iced::{Align, Column, Container, Element, HorizontalAlignment, Image, Length, Row, Text};
 
 #[derive(Debug)]
 pub enum Message {
@@ -45,13 +45,9 @@ impl Message {
     pub fn view(&mut self) -> Element<MessageMessage> {
         match self {
             Message::Loading => {
-
-                // TODO: I have the message mostly organized. Images are being weird
-
                 let message_image: Element<_> = Container::new(
-                    Text::new("mirdaki2"),
-                // Image::new("/home/matthew/Downloads/Mirror-Profile-Square.jpg"),
-                    // .width(Length::Fill)
+                    Image::new(format!("{}/assets/Ping-Logo-Idea.png", env!("CARGO_MANIFEST_DIR")))
+                        .width(Length::Fill),
                 )
                 .width(Length::Units(75))
                 .into();
