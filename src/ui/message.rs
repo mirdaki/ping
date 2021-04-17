@@ -46,8 +46,11 @@ impl Message {
         match self {
             Message::Loading => {
                 let message_image: Element<_> = Container::new(
-                    Image::new(format!("{}/assets/Ping-Logo-Idea.png", env!("CARGO_MANIFEST_DIR")))
-                        .width(Length::Fill),
+                    Image::new(format!(
+                        "{}/assets/test-image.png",
+                        env!("CARGO_MANIFEST_DIR")
+                    ))
+                    .width(Length::Fill),
                 )
                 .width(Length::Units(75))
                 .into();
